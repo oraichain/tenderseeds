@@ -1,0 +1,54 @@
+services:
+  cosmos:
+    build: .
+    environment:
+      - ID=cosmoshub-4
+      - SEEDS=ba3bacc714817218562f743178228f23678b2873@public-seed-node.cosmoshub.certus.one:26656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14956,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:14956,57a5297537b9b6ef8b105c08a8ad3f6ac452c423@seeds.goldenratiostaking.net:1618,c28827cb96c14c905b127b92065a3fb4cd77d7f6@seeds.whispernode.com:14956,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@cosmoshub.rpc.kjnodes.com:11359,fe21dd474640247888fc7c4dce82da8da08a8bfd@seed-cosmos-hub-01.stakeflow.io:26656,11c6114a18f7b380e536b0bd17c031f4746e4ded@seed-node.mms.team:43656,87ccc1dcc0b846fc1623ab9a5ab55682e8e2ad2e@seed-cosmoshub.freshstaking.com:26656
+    ports:
+      - 10001:26656
+    restart: always
+
+  osmosis:
+    build: .
+    environment:
+      - ID=osmosis-1
+      - SEEDS=f515a8599b40f0e84dfad935ba414674ab11a668@osmosis.blockpane.com:26656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12556,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:12556,ebc272824924ea1a27ea3183dd0b9ba713494f83@osmosis-mainnet-seed.autostake.com:26716,3cc024d1c760c9cd96e6413abaf3b36a8bdca58e@seeds.goldenratiostaking.net:1630,e891d42c31064fb7e0d99839536164473c4905c2@seed-osmosis.freshstaking.com:31656,c28827cb96c14c905b127b92065a3fb4cd77d7f6@seeds.whispernode.com:12556,38ab18cb2ea1dfeb6232b429e1508f56b6ae5031@seed-osmosis-01.stakeflow.io:65535,954ab3a0551b592b654b1554af8fc8746ed7b362@seed-node.mms.team:31656,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,2cb8dd6195c65458e3c18505bb70ce2ff624f85c@seed.osmosis.validatus.com:2000
+    ports:
+      - 10002:26656
+    restart: always
+
+  celestia:
+    build: .
+    environment:
+      - ID=celestia
+      - SEEDS=e6116822e1a5e283d8a85d3ec38f4d232274eaf3@consensus-full-seed-1.celestia-bootstrap.net:26656,cf7ac8b19ff56a9d47c75551bd4864883d1e24b5@consensus-full-seed-1.celestia-bootstrap.net:26656,ebc272824924ea1a27ea3183dd0b9ba713494f83@celestia-mainnet-seed.autostake.com:27206,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:16656,24a607a217cf12be29bae5b2e8151391bde2d8c8@seed-celestia-01.stakeflow.io:15007,c809ca6486cd54501ce5291714c892f5dc9cfa93@celestia.seeds.validao.xyz:36656,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@celestia.rpc.kjnodes.com:12059,9aa8a73ea9364aa3cf7806d4dd25b6aed88d8152@celestia.seed.mzonder.com:13156,3abb9ad6d7a3c728984c4b7e9c05e91731779865@seed-celestia.theamsolutions.info:23656,23b88ebcfb2177dbd2d8b2920c363a25e038e69a@seed.celestia.validatus.com:2000,b7408d0c59fc0fd0c9153365d5593c6c32870cb0@seed-celestia.freshstaking.com:34656,8de3b1534abc9d565f232982c0fb7933c0038ead@celestia-full.avril14th.org:26656,12ad7c73c7e1f2460941326937a039139aa78884@celestia-mainnet-seed.itrocket.net:40656
+    ports:
+      - 10003:26656
+    restart: always
+
+  dymension:
+    build: .
+    environment:
+      - ID=dymension_1100-1
+      - SEEDS=45bffa41836302b06310af67f012500cc0d1da31@rpc.dymension.nodestake.org:666,ebc272824924ea1a27ea3183dd0b9ba713494f83@dymension-mainnet-seed.autostake.com:27086,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:20556,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@dymension.rpc.kjnodes.com:14659,193262e32a9d7d3fffe14073160cabc4cdfef26b@dymension-rpc.stakeandrelax.net:20556,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,c28827cb96c14c905b127b92065a3fb4cd77d7f6@seeds.whispernode.com:20556,10ed1e176d874c8bb3c7c065685d2da6a4b86475@seed-dymension.ibs.team:16676,86bd5cb6e762f673f1706e5889e039d5406b4b90@seed.dymension.node75.org:10956,258f523c96efde50d5fe0a9faeea8a3e83be22ca@seed.mainnet.dymension.aviaone.com:10290
+    ports:
+      - 10004:26656
+    restart: always
+
+  oraichain:
+    build: .
+    environment:
+      - ID=Oraichain
+      - SEEDS=defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:23356
+    ports:
+      - 10005:26656
+    restart: always
+
+  injective:
+    build: .
+    environment:
+      - ID=injective-1
+      - SEEDS=38c18461209694e1f667ff2c8636ba827cc01c86@176.9.143.252:11751,4f9025feca44211eddc26cd983372114947b2e85@176.9.140.49:11751,c98bb1b889ddb58b46e4ad3726c1382d37cd5609@65.109.51.80:11751,23d0eea9bb42316ff5ea2f8b4cd8475ef3f35209@65.109.36.70:11751,f9ae40fb4a37b63bea573cc0509b4a63baa1a37a@15.235.114.80:11751,7f3473ddab10322b63789acb4ac58647929111ba@15.235.13.116:11751,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14356,ebc272824924ea1a27ea3183dd0b9ba713494f83@injective-mainnet-seed.autostake.com:26726,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:14356,1846e76e14913124a07e231586d487a0636c0296@tenderseed.ccvalidators.com:26007,5a1cd1a7da5aab3e3075fbae0a905c7256e48193@seeds.goldenratiostaking.net:1635,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,c28827cb96c14c905b127b92065a3fb4cd77d7f6@seeds.whispernode.com:14356,858c86e2590f82934b8483ed184afd88416a7b31@seed-injective-01.stakeflow.io:210
+    ports:
+      - 10006:26656
+    restart: always
