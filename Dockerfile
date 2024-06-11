@@ -23,6 +23,8 @@ USER tendermint
 
 WORKDIR /data
 
+COPY ./run.sh /data/
+
 EXPOSE 26656
 
-ENTRYPOINT ["tenderseed", "start"]
+ENTRYPOINT ["sh", "/data/run.sh"]
