@@ -17,6 +17,8 @@ FROM alpine:3.16
 
 COPY --from=builder /sources/build/ /usr/local/bin/
 
+RUN apk add --no-cache curl jq
+
 RUN addgroup tendermint && adduser -S -G tendermint tendermint -h /data
 
 USER tendermint
@@ -24,6 +26,8 @@ USER tendermint
 WORKDIR /data
 
 COPY ./run.sh /data/
+
+COPY ./info.sh /data/
 
 EXPOSE 26656
 
