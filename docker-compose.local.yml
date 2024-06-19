@@ -58,3 +58,10 @@ services:
     ports:
       - "${PORT_INJECTIVE}:${CONTAINER_PORT}"
     restart: always
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
